@@ -28,4 +28,4 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 #
 # NOTE: The version of the `openssl-sys` crate is not the same as OpenSSL itself.
 #       Versions 1.0.1 - 3.0.0 are automatically discovered.
-openssl-sys = { version = "0.9", features = ["vendored"] }
+#openssl-sys = { version = "0.9", features = ["vendored"] }

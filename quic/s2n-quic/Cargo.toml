@@ -27,12 +27,12 @@ provider-address-token-default = [
 provider-event-tracing = ["s2n-quic-core/event-tracing"]
 provider-tls-default = ["s2n-quic-tls-default"]
 provider-tls-rustls = ["s2n-quic-rustls"]
-provider-tls-s2n = ["s2n-quic-tls"]
+# provider-tls-s2n = ["s2n-quic-tls"]
 
 # List of unstable features. Add new unstable features to the check in s2n-quic/src/lib.rs
 #
 # This depends on experimental behavior in s2n-tls.
-unstable_client_hello = ["s2n-quic-tls/unstable_client_hello"]
+# unstable_client_hello = ["s2n-quic-tls/unstable_client_hello"]
 # This feature enables the datagram provider
 unstable-provider-datagram = []
 # This feature enables the testing IO provider
@@ -57,7 +57,7 @@ s2n-codec = { version = "=0.2.0", path = "../../common/s2n-codec" }
 s2n-quic-core = { version = "=0.14.0", path = "../s2n-quic-core" }
 s2n-quic-platform = { version = "=0.14.0", path = "../s2n-quic-platform", features = ["tokio-runtime"] }
 s2n-quic-rustls = { version = "=0.14.0", path = "../s2n-quic-rustls", optional = true }
-s2n-quic-tls = { version = "=0.14.0", path = "../s2n-quic-tls", optional = true }
+# s2n-quic-tls = { version = "=0.14.0", path = "../s2n-quic-tls", optional = true }
 s2n-quic-tls-default = { version = "=0.14.0", path = "../s2n-quic-tls-default", optional = true }
 s2n-quic-transport = { version = "=0.14.0", path = "../s2n-quic-transport" }
 tokio = { version = "1", default-features = false }

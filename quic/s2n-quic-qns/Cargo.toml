@@ -17,7 +17,7 @@ cfg-if = "1"
 futures = "0.3"
 http = "0.2"
 humansize = "1"
-openssl-sys = { version = "0.9", features = ["vendored"] }
+#openssl-sys = { version = "0.9", features = ["vendored"] }
 s2n-quic-core = { path = "../s2n-quic-core", features = ["testing"] }
 s2n-quic-h3 = { path = "../s2n-quic-h3" }
 structopt = "0.3"
@@ -27,7 +27,7 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 url = "2"
 
 [target.'cfg(unix)'.dependencies]
-s2n-quic = { path = "../s2n-quic", features = ["provider-event-tracing", "provider-tls-rustls", "provider-tls-s2n"] }
+s2n-quic = { path = "../s2n-quic", features = ["provider-event-tracing", "provider-tls-rustls"] }
 
 [target.'cfg(not(unix))'.dependencies]
 s2n-quic = { path = "../s2n-quic", features = ["provider-event-tracing", "provider-tls-rustls"] }
@@ -37,9 +37,9 @@ s2n-quic = { path = "../s2n-quic", features = ["provider-event-tracing", "provid
 mimalloc = { version = "0.1", default-features = false }
 
 # we don't use openssl-sys directly; it's just here to pin and vendor in dev
-[package.metadata.cargo-udeps.ignore]
-normal = [ "openssl-sys" ]
+# [package.metadata.cargo-udeps.ignore]
+# normal = [ "openssl-sys" ]
 
 # Use unstable s2n-quic features
-[target.'cfg(s2n_quic_unstable)'.dependencies]
-s2n-quic = { path = "../s2n-quic", features = ["unstable_client_hello"] }
+#[target.'cfg(s2n_quic_unstable)'.dependencies]
+#s2n-quic = { path = "../s2n-quic", features = ["unstable_client_hello"] }

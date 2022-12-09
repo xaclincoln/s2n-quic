@@ -10,8 +10,8 @@ license = "Apache-2.0"
 # Exclude corpus files when publishing to crates.io
 exclude = ["corpus.tar.gz"]
 
-[target.'cfg(unix)'.dependencies]
-s2n-quic-tls = { version = "=0.14.0", path = "../s2n-quic-tls" }
+# [target.'cfg(unix)'.dependencies]
+# s2n-quic-tls = { version = "=0.14.0", path = "../s2n-quic-tls" }
 
 [target.'cfg(not(unix))'.dependencies]
 s2n-quic-rustls = { version = "=0.14.0", path = "../s2n-quic-rustls" }
